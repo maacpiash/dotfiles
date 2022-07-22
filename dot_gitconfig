@@ -1,0 +1,10 @@
+[user]
+	name = Ahad Chowdhury
+	email = ahad@maacpiash.com
+	signingkey = 013EA22B353B22C4
+[commit]
+	gpgSign = true
+[pull]
+	rebase = true
+[init]
+	defaultBranch = trunk
