@@ -3,7 +3,7 @@ g.t_co = 256
 g.background = "dark"
 g.mapleader = ","
 g.localleader = "\\"
--- g.OmniSharp_server_use_net6 = 1
+g.OmniSharp_server_use_net6 = 1
 vim.cmd[[colorscheme darkplus]]
 
 -- Update the packpath

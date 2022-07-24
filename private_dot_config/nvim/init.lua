@@ -52,5 +52,5 @@ require('lualine').setup {
   extensions = {}
 }
 
-require('lspconfig').csharp_ls.setup{}
+require('lspconfig').omnisharp.setup{}
 -- For JS/TS/JSX/TSX, JSON, and Python, I am using CoC.nvim.
