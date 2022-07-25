@@ -1,8 +1,8 @@
 -- IMPORTS
+require('plug')      -- Plugins
 require('vars')      -- Variables
 require('opts')      -- Options
 require('keys')      -- Keymaps
-require('plug')      -- Plugins
 require('barb')      -- Barbar
 
 require('neo-tree').setup{}
