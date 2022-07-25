@@ -43,3 +43,6 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
+
+map('n', 'cgd', '<Cmd>OmniSharpPreviewDefinition<CR>', { noremap = true })
+map('n', '<C-p>', '<Cmd>:Telescope git_files<CR>', opts)
