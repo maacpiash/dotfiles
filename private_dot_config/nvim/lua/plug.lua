@@ -36,7 +36,8 @@ return require('packer').startup(function()
   use { 'neoclide/coc.nvim', branch = 'release' }    -- Concquer of Completion
   use 'dense-analysis/ale'                           -- Asynchronous Lint Engine
   use 'OmniSharp/omnisharp-vim'                      -- OmniSharp
-  use {
+  use 'nickspoons/vim-sharpenup'                     -- helper for OmniSharp
+  use {                                              -- tabs
     'romgrk/barbar.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
