@@ -23,6 +23,7 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lsp'                         -- LSP autocompletion provider
   use 'majutsushi/tagbar'                            -- code structure
   use 'Yggdroot/indentLine'                          -- see indentation
+  use 'puremourning/vimspector'                      -- debugging tool
   use 'tpope/vim-fugitive'                           -- git integration
   use 'junegunn/gv.vim'                              -- commit history
   use 'windwp/nvim-autopairs'                        -- auto close brackets, etc.
