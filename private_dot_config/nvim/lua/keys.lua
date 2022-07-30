@@ -32,8 +32,6 @@ map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 --                 :BufferCloseAllButCurrentOrPinned
 --                 :BufferCloseBuffersLeft
 --                 :BufferCloseBuffersRight
--- Magic buffer-picking mode
-map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
 -- Sort automatically by...
 map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
 map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
@@ -44,5 +42,6 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
 
-map('n', 'cgd', '<Cmd>OmniSharpPreviewDefinition<CR>', { noremap = true })
+map('n', 'cgd', '<Cmd>OmniSharpGotoDefinition<CR>', { noremap = true })
 map('n', '<C-p>', '<Cmd>:Telescope git_files<CR>', opts)
+map('n', '<C-e>', '<Cmd>:Neotree toggle<CR>', opts)
