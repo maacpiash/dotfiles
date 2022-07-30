@@ -6,6 +6,7 @@ require('keys')      -- Keymaps
 require('barb')      -- Barbar
 
 require('neo-tree').setup{}
+require('nvim-autopairs').setup{}
 
 local cmp = require('cmp')
 cmp.setup {
@@ -52,5 +53,7 @@ require('lualine').setup {
   extensions = {}
 }
 
-require('lspconfig').omnisharp.setup{}
+require('lspconfig').omnisharp.setup{
+  cmd = { 'dotnet', '/home/ahad/omnisharp-roslyn/OmniSharp.dll' }
+}
 -- For JS/TS/JSX/TSX, JSON, and Python, I am using CoC.nvim.
