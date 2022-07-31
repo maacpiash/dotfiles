@@ -45,3 +45,10 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 map('n', 'cgd', '<Cmd>OmniSharpGotoDefinition<CR>', { noremap = true })
 map('n', '<C-p>', '<Cmd>:Telescope git_files<CR>', opts)
 map('n', '<C-e>', '<Cmd>:Neotree toggle<CR>', opts)
+
+vim.cmd[[
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
+]]
