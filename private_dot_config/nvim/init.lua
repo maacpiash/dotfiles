@@ -4,8 +4,8 @@ require('vars')      -- Variables
 require('opts')      -- Options
 require('keys')      -- Keymaps
 require('barb')      -- Barbar
+require('neot')      -- NeoTree
 
-require('neo-tree').setup{}
 require('nvim-autopairs').setup{}
 
 local cmp = require('cmp')
