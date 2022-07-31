@@ -54,6 +54,6 @@ require('lualine').setup {
 }
 
 require('lspconfig').omnisharp.setup{
-  cmd = { 'dotnet', '/home/ahad/omnisharp-roslyn/OmniSharp.dll' }
+  cmd = { 'dotnet', '/home/ahad/Development/Tools/omnisharp-roslyn-v1.39.1/OmniSharp.dll' }
 }
 -- For JS/TS/JSX/TSX, JSON, and Python, I am using CoC.nvim.
