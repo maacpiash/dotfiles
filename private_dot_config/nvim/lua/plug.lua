@@ -37,7 +37,6 @@ return require('packer').startup(function()
   use 'folke/tokyonight.nvim'                        -- another dark theme
   use 'whatyouhide/vim-gotham'                       -- Gotham, a very dark theme
   use { 'neoclide/coc.nvim', branch = 'release' }    -- Concquer of Completion
-  use 'dense-analysis/ale'                           -- Asynchronous Lint Engine
   use 'OmniSharp/omnisharp-vim'                      -- OmniSharp
   use 'nickspoons/vim-sharpenup'                     -- helper for OmniSharp
   use {                                              -- tabs
