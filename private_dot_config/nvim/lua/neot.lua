@@ -66,7 +66,7 @@ require('neo-tree').setup({
   },
   window = {
     position = 'left',
-    width = 40,
+    width = 30,
     mapping_options = {
       noremap = true,
       nowait = true,
@@ -86,7 +86,7 @@ require('neo-tree').setup({
       ['w'] = 'open_with_window_picker',
       ['C'] = 'close_node',
       ['z'] = 'close_all_nodes',
-      --['Z'] = 'expand_all_nodes',
+      ['Z'] = 'expand_all_nodes',
       ['a'] = { 
         'add',
         -- some commands may take optional config options, see `:h neo-tree-mappings` for details
