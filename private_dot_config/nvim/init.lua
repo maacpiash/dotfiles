@@ -56,4 +56,7 @@ require('lualine').setup {
 require('lspconfig').omnisharp.setup {
   cmd = { 'dotnet', '/home/ahad/Development/Tools/omnisharp-roslyn-v1.39.1/OmniSharp.dll' }
 }
+require('lsp_signature').setup({
+  bind = true, -- This is mandatory, otherwise border config won't get registered.
+})
 -- For JS/TS/JSX/TSX, JSON, Python, and R, I am using CoC.nvim.

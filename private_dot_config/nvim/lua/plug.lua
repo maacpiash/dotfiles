@@ -39,6 +39,7 @@ return require('packer').startup(function()
   use { 'neoclide/coc.nvim', branch = 'release' }    -- Concquer of Completion
   use 'OmniSharp/omnisharp-vim'                      -- OmniSharp
   use 'nickspoons/vim-sharpenup'                     -- helper for OmniSharp
+  use 'ray-x/lsp_signature.nvim'                     -- show function signature
   use {                                              -- tabs
     'romgrk/barbar.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' }
