@@ -21,6 +21,10 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'                        -- native LSP support
   use 'hrsh7th/nvim-cmp'                             -- autocompletion framework
   use 'hrsh7th/cmp-nvim-lsp'                         -- LSP autocompletion provider
+  use {                                              -- Parser generator
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
   use 'majutsushi/tagbar'                            -- code structure
   use 'Yggdroot/indentLine'                          -- see indentation
   use 'puremourning/vimspector'                      -- debugging tool

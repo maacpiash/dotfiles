@@ -74,3 +74,27 @@ require('lsp_signature').setup({
   bind = true, -- This is mandatory, otherwise border config won't get registered.
 })
 -- For JS/TS/JSX/TSX, JSON, Python, and R, I am using CoC.nvim.
+
+require('nvim-treesitter.configs').setup({
+  ensure_installed = {
+    "c_sharp",
+    "comment",
+    "dockerfile",
+    "json5",
+    "lua",
+    "markdown",
+    "python",
+    "r",
+    "regex",
+    "todotxt",
+    "typescript",
+    "vim",
+    "yaml",
+  },
+  highlight = {
+    enable = true,
+  },
+  indent = {
+    enable = true
+  }
+})
