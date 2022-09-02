@@ -21,6 +21,7 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'                        -- native LSP support
   use 'hrsh7th/nvim-cmp'                             -- autocompletion framework
   use 'hrsh7th/cmp-nvim-lsp'                         -- LSP autocompletion provider
+  use 'simrat39/symbols-outline.nvim'                -- A tree like view for symbols, using LSP
   use {                                              -- Parser generator
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
