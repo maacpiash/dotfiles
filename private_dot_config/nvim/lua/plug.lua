@@ -20,7 +20,10 @@ return require('packer').startup(function()
 
   use 'neovim/nvim-lspconfig'                        -- native LSP support
   use 'hrsh7th/nvim-cmp'                             -- autocompletion framework
-  use 'hrsh7th/cmp-nvim-lsp'                         -- LSP autocompletion provider
+  use 'hrsh7th/cmp-nvim-lsp'                         -- nvim-cmp source for neovim's built-in language server client
+  use 'hrsh7th/cmp-nvim-lsp-signature-help'          -- nvim-cmp source for displaying function signatures
+  use 'hrsh7th/cmp-buffer'                           -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-path'                             -- nvim-cmp source for filesystem paths
   use 'simrat39/symbols-outline.nvim'                -- A tree like view for symbols, using LSP
   use {                                              -- Parser generator
     'nvim-treesitter/nvim-treesitter',
