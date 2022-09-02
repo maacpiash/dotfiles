@@ -22,7 +22,7 @@ cmp.setup {
     { name = 'nvim_lsp' },
   },
   enabled = function()
-    if vim.bo.buftype == 'csharp' then
+    if vim.bo.filetype == 'cs' then
       return false
     end
     return true
