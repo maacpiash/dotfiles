@@ -8,7 +8,6 @@ local omnisharp_path = '/home/ahad/Development/Tools/omnisharp-roslyn-v1.39.1/Om
 omnisharp_config.cmd = { 'dotnet', omnisharp_path, '--languageserver', '--hostPID', tostring(pid) }
 
 omnisharp_config.handlers = {
-   ['textDocument/definition'] = require('omnisharp_extended').handler,
    ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
    ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 }
@@ -51,7 +50,7 @@ local on_attach = function(client, bufnr)
    local opts = { noremap=true, silent=true, buffer=bufnr }
 
    if client.name == 'omnisharp' then
-      buf_set_keymap('n', 'gd', '<Cmd>lua require("omnisharp_extended").lsp_definitions()<CR>', opts)
+      buf_set_keymap('n', 'gd', '<Cmd>OmniSharpGotoDefinition<CR>', opts)
    else
       buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
    end

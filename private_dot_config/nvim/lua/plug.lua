@@ -47,7 +47,6 @@ return require('packer').startup(function()
   use { 'neoclide/coc.nvim', branch = 'release' }    -- Concquer of Completion
   use 'OmniSharp/omnisharp-vim'                      -- OmniSharp
   use 'nickspoons/vim-sharpenup'                     -- helper for OmniSharp
-  use 'Hoffs/omnisharp-extended-lsp.nvim'            -- Extended `textDocument/definition` handler
   use 'ray-x/lsp_signature.nvim'                     -- show function signature
   use {                                              -- tabs
     'romgrk/barbar.nvim',
