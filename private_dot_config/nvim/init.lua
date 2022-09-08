@@ -7,10 +7,10 @@ require('barb')      -- Barbar
 require('neot')      -- NeoTree
 require('lsp')       -- LSP
 
-require('nvim-autopairs').setup{}
+require('nvim-autopairs').setup({})
 
 local cmp = require('cmp')
-cmp.setup {
+cmp.setup({
   mapping = {
     ['<Tab>'] = cmp.mapping.select_next_item(),
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),
@@ -25,13 +25,8 @@ cmp.setup {
     { name = 'buffer' },
     { name = 'path' },
   },
-  enabled = function()
-    if vim.bo.filetype == 'cs' then
-      return false
-    end
-    return true
-  end,
-}
+  enabled = true,
+})
 
 require('lualine').setup {
   options = {
@@ -63,21 +58,9 @@ require('lualine').setup {
   extensions = {}
 }
 
--- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
--- local pid = vim.fn.getpid()
--- local omnisharpPath = '/home/ahad/Development/Tools/omnisharp-roslyn-v1.39.1/OmniSharp.dll'
-
--- require('lspconfig').omnisharp.setup {
---   cmd = {
---     'dotnet', omnisharpPath, '--languageserver' , '--hostPID', tostring(pid)
---   },
---   capabilities = capabilities,
--- }
-
 require('lsp_signature').setup({
   bind = true, -- This is mandatory, otherwise border config won't get registered.
 })
--- For JS/TS/JSX/TSX, JSON, Python, and R, I am using CoC.nvim.
 
 require('nvim-treesitter.configs').setup({
   ensure_installed = {
