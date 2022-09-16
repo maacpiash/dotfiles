@@ -32,8 +32,6 @@ return require('packer').startup(function()
   use 'majutsushi/tagbar'                            -- code structure
   use 'Yggdroot/indentLine'                          -- see indentation
   use 'puremourning/vimspector'                      -- debugging tool
-  use 'tpope/vim-fugitive'                           -- git integration
-  use 'junegunn/gv.vim'                              -- commit history
   use 'windwp/nvim-autopairs'                        -- auto close brackets, etc.
   use 'editorconfig/editorconfig-vim'                -- editorconfig
   use 'tpope/vim-commentary'                         -- comment/uncomment
@@ -46,7 +44,6 @@ return require('packer').startup(function()
   use 'whatyouhide/vim-gotham'                       -- Gotham, a very dark theme
   use { 'neoclide/coc.nvim', branch = 'release' }    -- Concquer of Completion
   use 'OmniSharp/omnisharp-vim'                      -- OmniSharp
-  use 'nickspoons/vim-sharpenup'                     -- helper for OmniSharp
   use 'ray-x/lsp_signature.nvim'                     -- show function signature
   use {                                              -- tabs
     'romgrk/barbar.nvim',
