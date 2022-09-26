@@ -9,25 +9,6 @@ require('lsp')       -- LSP
 
 require('nvim-autopairs').setup({})
 
-local cmp = require('cmp')
-cmp.setup({
-  mapping = {
-    ['<Tab>'] = cmp.mapping.select_next_item(),
-    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
-    ['<CR>'] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
-    })
-  },
-  sources = {
-    { name = 'nvim_lsp' },
-    { name = 'nvim_lsp_signature_help' },
-    { name = 'buffer' },
-    { name = 'path' },
-  },
-  enabled = true,
-})
-
 require('lualine').setup {
   options = {
     icons_enabled = true,
