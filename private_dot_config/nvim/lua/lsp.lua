@@ -1,5 +1,10 @@
 local lspconfig = require('lspconfig')
 
+local handlers = {
+  ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' }),
+  ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' }),
+}
+
 local on_attach = function(client, bufnr)
   local set = vim.keymap.set
 
@@ -36,14 +41,9 @@ local rounded_border_handlers = {
 local lang_servers = {
   omnisharp = {
     cmd = { 'dotnet', '/home/ahad/Development/Tools/omnisharp-roslyn-v1.39.1/OmniSharp.dll' },
-    handlers = rounded_border_handlers,
   },
-  tsserver = {
-    handlers = rounded_border_handlers,
-  },
-  pyright = {
-    handlers = rounded_border_handlers,
-  },
+  tsserver = {},
+  pyright = {},
 }
 
 for name, config in pairs(lang_servers) do
@@ -51,5 +51,6 @@ for name, config in pairs(lang_servers) do
   config.capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
   config.on_attach = on_attach
+  config.handlers = handlers
   lspconfig[name].setup(config)
 end
