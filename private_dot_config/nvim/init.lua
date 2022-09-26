@@ -58,10 +58,6 @@ require('lualine').setup {
   extensions = {}
 }
 
-require('lsp_signature').setup({
-  bind = true, -- This is mandatory, otherwise border config won't get registered.
-})
-
 require('nvim-treesitter.configs').setup({
   ensure_installed = {
     "c_sharp",

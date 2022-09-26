@@ -43,7 +43,6 @@ return require('packer').startup(function()
   use 'folke/tokyonight.nvim'                        -- another dark theme
   use 'whatyouhide/vim-gotham'                       -- Gotham, a very dark theme
   use 'OmniSharp/omnisharp-vim'                      -- OmniSharp
-  use 'ray-x/lsp_signature.nvim'                     -- show function signature
   use {                                              -- tabs
     'romgrk/barbar.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' }
