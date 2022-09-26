@@ -9,14 +9,14 @@ return require('packer').startup(function()
   vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
   use {                                              -- filesystem navigation
-    "nvim-neo-tree/neo-tree.nvim",
-      branch = "v2.x",
-      requires = { 
-        "nvim-lua/plenary.nvim",
-        "kyazdani42/nvim-web-devicons",              -- filesystem icons
-        "MunifTanjim/nui.nvim",
-      }
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v2.x',
+    requires = { 
+      'nvim-lua/plenary.nvim',
+      'kyazdani42/nvim-web-devicons',              -- filesystem icons
+      'MunifTanjim/nui.nvim',
     }
+  }
 
   use 'neovim/nvim-lspconfig'                        -- native LSP support
   use {
@@ -78,8 +78,8 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-buffer'                           -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-path'                             -- nvim-cmp source for filesystem paths
   use 'simrat39/symbols-outline.nvim'                -- A tree like view for symbols, using LSP
-  use {                                              -- Parser generator
-    'nvim-treesitter/nvim-treesitter',
+  use {
+    'nvim-treesitter/nvim-treesitter',               -- Parser generator
     run = ':TSUpdate'
   }
   use 'majutsushi/tagbar'                            -- code structure
@@ -89,7 +89,7 @@ return require('packer').startup(function()
   use 'editorconfig/editorconfig-vim'                -- editorconfig
   use 'tpope/vim-commentary'                         -- comment/uncomment
   use {
-    'nvim-lualine/lualine.nvim',
+    'nvim-lualine/lualine.nvim',                     -- A fast and configurable Neovim statusline
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use 'martinsione/darkplus.nvim'                    -- dark VS theme
