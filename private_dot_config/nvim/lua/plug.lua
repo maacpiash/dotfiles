@@ -42,7 +42,6 @@ return require('packer').startup(function()
   use 'martinsione/darkplus.nvim'                    -- dark VS theme
   use 'folke/tokyonight.nvim'                        -- another dark theme
   use 'whatyouhide/vim-gotham'                       -- Gotham, a very dark theme
-  use { 'neoclide/coc.nvim', branch = 'release' }    -- Concquer of Completion
   use 'OmniSharp/omnisharp-vim'                      -- OmniSharp
   use 'ray-x/lsp_signature.nvim'                     -- show function signature
   use {                                              -- tabs
