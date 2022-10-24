@@ -1,7 +1,7 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
-oh-my-posh init fish | source
+oh-my-posh init fish --config ~/.omp.json | source
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
