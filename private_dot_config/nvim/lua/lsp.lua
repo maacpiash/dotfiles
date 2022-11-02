@@ -40,7 +40,7 @@ local rounded_border_handlers = {
 
 local lang_servers = {
   omnisharp = {
-    cmd = { 'dotnet', '/home/ahad/Development/Tools/omnisharp-roslyn-v1.39.1/OmniSharp.dll' },
+    cmd = { 'dotnet', '/home/ahad/Development/Tools/omnisharp-roslyn-v1.39.2/OmniSharp.dll' },
   },
   tsserver = {},
   pyright = {},
