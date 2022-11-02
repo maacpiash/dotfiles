@@ -4,7 +4,7 @@ Dotfiles, managed with [Chezmoi](https://www.chezmoi.io).
 
 - Git config
 - Fish shell config
-- Neovim config (with CoC config)
+- Neovim config
 
 ### How to apply these settings
 
