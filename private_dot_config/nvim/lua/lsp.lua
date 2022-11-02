@@ -48,7 +48,7 @@ local lang_servers = {
 
 for name, config in pairs(lang_servers) do
   local capabilities = vim.lsp.protocol.make_client_capabilities()
-  config.capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+  config.capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
   config.on_attach = on_attach
   config.handlers = handlers
