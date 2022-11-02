@@ -16,3 +16,5 @@ g.EditorConfig_core_mode = 'external_command'
 -- Update the packpath
 local packer_path = vim.fn.stdpath('config') .. '/site'
 vim.o.packpath = vim.o.packpath .. ',' .. packer_path
+
+vim.opt.completeopt = 'menu,menuone,noselect'
