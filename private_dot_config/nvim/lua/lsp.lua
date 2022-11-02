@@ -33,11 +33,6 @@ local on_attach = function(client, bufnr)
   set('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
-local rounded_border_handlers = {
-  ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' }),
-  ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' }),
-}
-
 local lang_servers = {
   omnisharp = {
     cmd = { 'dotnet', '/home/ahad/Development/Tools/omnisharp-roslyn-v1.39.2/OmniSharp.dll' },
