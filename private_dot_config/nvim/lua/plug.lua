@@ -5,16 +5,10 @@ return require('packer').startup(function()
     requires = { 'nvim-lua/plenary.nvim' }
   }
 
-  -- Unless you are still migrating, remove the deprecated commands from v1.x
-  vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-
-  use {                                              -- filesystem navigation
-    'nvim-neo-tree/neo-tree.nvim',
-    branch = 'v2.x',
-    requires = { 
-      'nvim-lua/plenary.nvim',
-      'nvim-tree/nvim-web-devicons',                 -- filesystem icons
-      'MunifTanjim/nui.nvim',
+  use {
+    'nvim-tree/nvim-tree.lua',                       -- A file explorer tree for neovim written in lua
+    requires = {
+      'nvim-tree/nvim-web-devicons',                 -- file icons
     }
   }
 

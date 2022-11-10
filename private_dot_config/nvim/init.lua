@@ -4,7 +4,7 @@ require('vars')      -- Variables
 require('opts')      -- Options
 require('keys')      -- Keymaps
 require('barb')      -- Barbar
-require('neot')      -- NeoTree
+require('tree')      -- NVim-Tree
 require('lsp')       -- LSP
 
 require('nvim-autopairs').setup({})
