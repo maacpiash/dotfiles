@@ -13,7 +13,7 @@ return require('packer').startup(function()
     branch = 'v2.x',
     requires = { 
       'nvim-lua/plenary.nvim',
-      'kyazdani42/nvim-web-devicons',              -- filesystem icons
+      'nvim-tree/nvim-web-devicons',                 -- filesystem icons
       'MunifTanjim/nui.nvim',
     }
   }
@@ -41,7 +41,7 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'                         -- comment/uncomment
   use {
     'nvim-lualine/lualine.nvim',                     -- A fast and configurable Neovim statusline
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   use 'martinsione/darkplus.nvim'                    -- dark VS theme
   use 'folke/tokyonight.nvim'                        -- another dark theme
@@ -49,6 +49,6 @@ return require('packer').startup(function()
   use 'OmniSharp/omnisharp-vim'                      -- OmniSharp
   use {                                              -- tabs
     'romgrk/barbar.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' }
+    requires = { 'nvim-tree/nvim-web-devicons' }
   }
 end)
