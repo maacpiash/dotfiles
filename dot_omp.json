@@ -177,14 +177,15 @@
           ],
           "foreground": "#262626",
           "invert_powerline": true,
-          "leading_diamond": "\ue0b2",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
           "properties": {
             "charged_icon": "\uf58e ",
             "charging_icon": "\uf1e6 ",
             "discharging_icon": "\ue234 "
           },
           "style": "diamond",
-          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 <#262626>\ue0b2</>",
+          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 ",
           "type": "battery"
         },
         {
