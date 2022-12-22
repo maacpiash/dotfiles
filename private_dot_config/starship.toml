@@ -1,0 +1,55 @@
+[c]
+symbol = ' '
+
+[cmd_duration]
+min_time = 1000
+
+[conda]
+symbol = ' '
+
+[directory]
+read_only = ' '
+
+[docker_context]
+symbol = ' '
+
+[dotnet]
+symbol = ' '
+
+[git_branch]
+symbol = ' '
+
+[golang]
+symbol = ' '
+
+[hostname]
+ssh_only = false
+format = 'at [$hostname](bold blue) in '
+disabled = false
+
+[lua]
+symbol = ' '
+
+[memory_usage]
+symbol = ' '
+
+[nodejs]
+symbol = ' '
+
+[package]
+symbol = ' '
+
+[python]
+symbol = ' '
+detect_folders = ['.venv']
+
+[rlang]
+symbol = 'ﳒ '
+
+[rust]
+symbol = ' '
+
+[username]
+format = '[$user](bold yellow) '
+disabled = false
+show_always = true
