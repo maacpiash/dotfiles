@@ -43,6 +43,6 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 -- :BarbarDisable - very bad command, should never be used
 
 map('n', 'cca', '<Cmd>OmniSharpGetCodeActions<CR>', { noremap = true })
-map('n', '<C-p>', '<Cmd>:Telescope git_files<CR>', opts)
+map('n', '<C-P>', '<Cmd>:Telescope git_files<CR>', opts)
 map('n', '<C-e>', '<Cmd>:NvimTreeToggle<CR>', opts)
 map('n', '<C-c>', "<Cmd>:lua require('cmp').setup.buffer { enabled = false }<CR>", opts)
