@@ -45,4 +45,6 @@ return require('packer').startup(function()
     'romgrk/barbar.nvim',
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
+  use 'jose-elias-alvarez/null-ls.nvim'              -- allow non-LSP sources (e.g. Prettier) to hook into LSP client
+  use 'MunifTanjim/prettier.nvim'                    -- Prettier
 end)

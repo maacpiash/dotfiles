@@ -7,3 +7,4 @@ require('tree')      -- NVim-Tree
 require('lsp')       -- LSP
 require('comp')      -- Autocompletion
 require('alts')      -- Autopairs, Lualine, Treesitter
+require('pret')      -- Prettier
