@@ -39,6 +39,7 @@ local lang_servers = {
   },
   tsserver = {},
   pyright = {},
+  astro = {},
 }
 
 for name, config in pairs(lang_servers) do
