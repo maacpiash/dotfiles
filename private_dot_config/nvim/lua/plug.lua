@@ -31,7 +31,7 @@ return require('packer').startup(function()
   use 'Yggdroot/indentLine'                          -- see indentation
   use 'puremourning/vimspector'                      -- debugging tool
   use 'windwp/nvim-autopairs'                        -- auto close brackets, etc.
-  use 'editorconfig/editorconfig-vim'                -- editorconfig
+  use 'gpanders/editorconfig.nvim'                   -- EditorConfig plugin for NeoVim written in Fennel
   use 'tpope/vim-commentary'                         -- comment/uncomment
   use {
     'nvim-lualine/lualine.nvim',                     -- A fast and configurable Neovim statusline
