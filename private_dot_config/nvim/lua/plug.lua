@@ -41,6 +41,7 @@ return require('packer').startup(function()
   use 'folke/tokyonight.nvim'                        -- another dark theme
   use 'whatyouhide/vim-gotham'                       -- Gotham, a very dark theme
   use 'OmniSharp/omnisharp-vim'                      -- OmniSharp
+  use 'fedepujol/move.nvim'                          -- move lines and blocks and auto-indent them
   use {                                              -- tabs
     'romgrk/barbar.nvim',
     requires = { 'nvim-tree/nvim-web-devicons' }
