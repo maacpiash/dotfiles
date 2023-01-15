@@ -1,6 +1,11 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+local function is_git_repo()
+    local is_repo = vim.fn.system('git rev-parse --is-inside-work-tree')
+    return vim.v.shell_error == 0
+end 
+
 -- barbar
 
 -- Move to previous/next
@@ -43,7 +48,13 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 -- :BarbarDisable - very bad command, should never be used
 
 map('n', 'cca', '<Cmd>OmniSharpGetCodeActions<CR>', { noremap = true })
-map('n', '<C-p>', '<Cmd>:Telescope git_files<CR>', opts)
+
+if is_git_repo() then
+    map('n', '<C-p>', '<Cmd>:Telescope git_files<CR>', opts)
+else
+    map('n', '<C-p>', '<Cmd>:Telescope find_files<CR>', opts)
+end
+
 map('n', '<C-e>', '<Cmd>:NvimTreeToggle<CR>', opts)
 map('n', '<C-c>', "<Cmd>:lua require('cmp').setup.buffer { enabled = false }<CR>", opts)
 
