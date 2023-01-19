@@ -40,10 +40,14 @@ local lang_servers = {
   tsserver = {},
   pyright = {},
   astro = {},
+  html = {},
+  cssls = {},
+  eslint = {},
 }
 
 for name, config in pairs(lang_servers) do
   local capabilities = vim.lsp.protocol.make_client_capabilities()
+  capabilities.textDocument.completion.completionItem.snippetSupport = true
   config.capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
   config.on_attach = on_attach
