@@ -43,6 +43,7 @@ local lang_servers = {
   html = {},
   cssls = {},
   eslint = {},
+  clangd = {},
 }
 
 for name, config in pairs(lang_servers) do
