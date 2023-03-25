@@ -33,6 +33,24 @@ local on_attach = function(client, bufnr)
   set('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
+require('mason').setup()
+
+require('mason-lspconfig').setup({
+  ensure_installed = {
+    'omnisharp',
+    'tsserver',
+    'pyright',
+    'html',
+    'astro',
+    'emmet_ls',
+    'cssls',
+    'eslint',
+    'clangd',
+    'lua_ls',
+    'rust_analyzer'
+  },
+})
+
 local lang_servers = {
   omnisharp = {
     cmd = { 'dotnet', '/home/ahad/Development/Tools/omnisharp-roslyn-v1.39.2/OmniSharp.dll' },
