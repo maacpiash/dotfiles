@@ -1,4 +1,4 @@
-return require('packer').startup(function()
+return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'                       -- so packer can update itself
   use {                                              -- nice interface for LSP functions (among other things)
     'nvim-telescope/telescope.nvim',
