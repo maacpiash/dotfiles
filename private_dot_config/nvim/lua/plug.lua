@@ -11,8 +11,11 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons',                 -- file icons
     }
   }
-
-  use 'neovim/nvim-lspconfig'                        -- native LSP support
+  use {
+    'williamboman/mason.nvim',                       -- manage external editor tooling such as LSP servers
+    'williamboman/mason-lspconfig.nvim',             -- Extension to mason.nvim
+    'neovim/nvim-lspconfig',                         -- native LSP support
+  }
   use {
     'L3MON4D3/LuaSnip',                              -- Snippet Engine and Snippet Expansion
     requires = { 'saadparwaiz1/cmp_luasnip' }
