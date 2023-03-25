@@ -7,7 +7,7 @@ local handlers = {
 
 local on_attach = function(client, bufnr)
   local set = vim.keymap.set
-
+  
   local opts = { noremap = true, silent = true, buffer = bufnr }
   
   if client.name == 'omnisharp' then
@@ -44,6 +44,26 @@ local lang_servers = {
   cssls = {},
   eslint = {},
   clangd = {},
+  rust_analyzer = {
+    settings = {
+      ['rust-analyzer'] = {
+        imports = {
+          granularity = {
+            group = 'module',
+          },
+          prefix = 'self',
+        },
+        cargo = {
+          buildScripts = {
+            enable = true,
+          },
+        },
+        procMacro = {
+          enable = true
+        },
+      }
+    }
+  }
 }
 
 for name, config in pairs(lang_servers) do
