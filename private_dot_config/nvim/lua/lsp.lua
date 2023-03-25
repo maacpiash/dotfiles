@@ -61,6 +61,16 @@ local lang_servers = {
   html = {},
   cssls = {},
   eslint = {},
+  emmet_ls = {
+    filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+    init_options = {
+      html = {
+        options = {
+          ['bem.enabled'] = true,
+        },
+      },
+    }
+  },
   clangd = {},
   rust_analyzer = {
     settings = {
