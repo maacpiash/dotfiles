@@ -1,10 +1,12 @@
 Dotfiles, managed with [Chezmoi](https://www.chezmoi.io).
 
-### Included configs
+### Included configurations
 
-- Git config
-- Fish shell config
-- Neovim config
+- Git
+- Fish shell
+- Nushell
+- Neovim
+- Tmux
 
 ### How to apply these settings
 
