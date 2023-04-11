@@ -1,4 +1,10 @@
+{{ if eq .chezmoi.os "darwin" }}
+set-option -g default-shell /usr/local/bin/fish
+{{ end }}
+
+{{ if eq .chezmoi.os "linux" }}
 set-option -g default-shell /usr/bin/fish
+{{ end }}
 
 unbind r
 bind r source-file ~/.tmux.conf
