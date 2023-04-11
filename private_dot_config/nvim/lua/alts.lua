@@ -53,3 +53,5 @@ require('nvim-treesitter.configs').setup({
     enable = true
   }
 })
+
+require('symbols-outline').setup()
