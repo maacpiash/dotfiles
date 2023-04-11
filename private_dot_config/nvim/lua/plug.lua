@@ -13,8 +13,8 @@ return require('packer').startup(function(use)
   }
   use {
     'williamboman/mason.nvim',                       -- manage external editor tooling such as LSP servers
-    'williamboman/mason-lspconfig.nvim',             -- Extension to mason.nvim
-    'neovim/nvim-lspconfig',                         -- native LSP support
+    'williamboman/mason-lspconfig.nvim',              -- Extension to mason.nvim
+    'neovim/nvim-lspconfig',                          -- native LSP support
   }
   use {
     'L3MON4D3/LuaSnip',                              -- Snippet Engine and Snippet Expansion
