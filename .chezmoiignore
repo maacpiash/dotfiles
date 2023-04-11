@@ -1,1 +1,4 @@
 README.md
+{{- if ne .chezmoi.os "darwin" }}
+~/.iterm2_shell_integration.fish
+{{- end }}
