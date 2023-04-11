@@ -16,6 +16,18 @@ return require('packer').startup(function(use)
     'williamboman/mason-lspconfig.nvim',              -- Extension to mason.nvim
     'neovim/nvim-lspconfig',                          -- native LSP support
   }
+  use({
+    'utilyre/barbecue.nvim',                         --  A VS Code like winbar for Neovim
+    tag = '*',
+    requires = {
+      'SmiteshP/nvim-navic',
+      'nvim-tree/nvim-web-devicons',
+    },
+    after = 'nvim-web-devicons',
+    config = function()
+      require('barbecue').setup()
+    end,
+  })
   use {
     'L3MON4D3/LuaSnip',                              -- Snippet Engine and Snippet Expansion
     requires = { 'saadparwaiz1/cmp_luasnip' }
@@ -41,7 +53,6 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   use 'martinsione/darkplus.nvim'                    -- dark VS theme
-  use 'folke/tokyonight.nvim'                        -- another dark theme
   use 'whatyouhide/vim-gotham'                       -- Gotham, a very dark theme
   use 'OmniSharp/omnisharp-vim'                      -- OmniSharp
   use 'fedepujol/move.nvim'                          -- move lines and blocks and auto-indent them
