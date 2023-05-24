@@ -49,6 +49,11 @@ symbol = 'ﳒ '
 [rust]
 symbol = ' '
 
+[sudo]
+disabled = false
+style = 'bold green'
+symbol = 'superuser '
+
 [username]
 format = '[$user](bold yellow) '
 disabled = false
