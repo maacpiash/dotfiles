@@ -4,7 +4,6 @@ Dotfiles, managed with [Chezmoi](https://www.chezmoi.io).
 
 - Git
 - Fish shell
-- Nushell
 - Neovim
 - Tmux
 
