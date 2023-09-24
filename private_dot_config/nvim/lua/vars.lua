@@ -8,7 +8,7 @@ g.loaded_perl_provider = 0
 g.loaded_python_provider = 0
 g.loaded_ruby_provider = 0
 g.python3_host_prog = vim.fn.system('which python3'):gsub('\n+', '')
-vim.cmd[[colorscheme darkplus]]
+vim.cmd[[colorscheme catppuccin-mocha]]
 
 g.EditorConfig_exec_path = '/home/ahad/.dotnet/tools/editorconfig'
 g.EditorConfig_core_mode = 'external_command'
