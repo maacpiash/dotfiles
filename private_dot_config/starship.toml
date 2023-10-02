@@ -10,6 +10,12 @@ symbol = ' '
 [directory]
 read_only = ' '
 
+[directory.substitutions]
+'Documents' = '󰈙 '
+'Downloads' = ' '
+'Music' = ' '
+'Pictures' = ' '
+
 [docker_context]
 symbol = ' '
 
