@@ -4,5 +4,14 @@ end
 starship init fish | source
 
 {{ if eq .chezmoi.os "darwin" }}
+
+# fish
 source ~/.iterm2_shell_integration.fish
+
+# pnpm
+if not string match -q -- $PNPM_HOME $PATH
+set -gx PNPM_HOME "/Users/ahad/Library/pnpm"
+  set -gx PATH /Users/ahad/.bin "$PNPM_HOME" $PATH
+end
+
 {{ end }}
