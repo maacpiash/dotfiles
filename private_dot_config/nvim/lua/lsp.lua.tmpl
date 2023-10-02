@@ -65,7 +65,14 @@ local lang_servers = {
   astro = {},
   html = {},
   cssls = {},
-  eslint = {},
+  eslint = {
+    on_attach = function(client, bufnr)
+      vim.api.nvim_create_autocmd('BufWritePre', {
+        buffer = bufnr,
+        command = 'EslintFixAll',
+      })
+    end,
+  },
   emmet_ls = {
     filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
     init_options = {
