@@ -63,4 +63,38 @@ return require('packer').startup(function(use)
   }
   use 'jose-elias-alvarez/null-ls.nvim'              -- allow non-LSP sources (e.g. Prettier) to hook into LSP client
   use 'MunifTanjim/prettier.nvim'                    -- Prettier
+  use {
+    'ellisonleao/glow.nvim',                         -- markdown preview
+    config = function()
+      require('glow').setup()
+    end,
+  }
+  use {
+    'gorbit99/codewindow.nvim',                      -- minimap of code
+    config = function()
+      local codewindow = require('codewindow')
+      codewindow.setup()
+      codewindow.apply_default_keybinds()
+    end,
+  }
+  use {
+    'lukas-reineke/indent-blankline.nvim',           -- show (blank) indentation of lines
+    config = function()
+      vim.opt.list = true
+      vim.opt.listchars:append 'space:⋅'
+      vim.opt.listchars:append 'eol:↴'
+      require('indent_blankline').setup {
+        show_end_of_line = false,
+        space_char_blankline = ' ',
+        show_current_context = true,
+        show_current_context_start = true,
+      }
+    end
+  }
+  use {
+    'lewis6991/gitsigns.nvim',                       -- Git integration for buffers 
+    config = function ()
+      require('gitsigns').setup()
+    end
+  }
 end)
