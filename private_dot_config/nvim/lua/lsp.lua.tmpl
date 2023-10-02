@@ -63,7 +63,9 @@ local lang_servers = {
   tsserver = {},
   pyright = {},
   astro = {},
-  html = {},
+  html = {
+    filetypes = { 'html', 'razor' }
+  },
   cssls = {},
   eslint = {
     on_attach = function(client, bufnr)
