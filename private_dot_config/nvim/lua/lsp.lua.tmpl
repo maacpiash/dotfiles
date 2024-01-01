@@ -52,14 +52,7 @@ require('mason-lspconfig').setup({
 })
 
 local lang_servers = {
-  omnisharp = {
-    {{ if eq .chezmoi.os "darwin" }}
-    cmd = { 'dotnet', '/Users/ahad/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp.dll' },
-    {{ end }}
-    {{ if eq .chezmoi.os "linux" }}
-    cmd = { 'dotnet', '/home/ahad/Development/Tools/omnisharp-roslyn-v1.39.2/OmniSharp.dll' },
-    {{ end }}
-  },
+  omnisharp = {},
   tsserver = {},
   pyright = {},
   astro = {},
