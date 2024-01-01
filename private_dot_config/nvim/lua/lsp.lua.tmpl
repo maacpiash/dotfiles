@@ -48,7 +48,8 @@ require('mason-lspconfig').setup({
     'eslint',
     'clangd',
     'lua_ls',
-    'rust_analyzer'
+    'rust_analyzer',
+    svelte,
   },
 })
 
@@ -100,7 +101,8 @@ local lang_servers = {
         },
       }
     }
-  }
+  },
+  svelte = {},
 }
 
 for name, config in pairs(lang_servers) do
