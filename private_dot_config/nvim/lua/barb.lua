@@ -1,6 +1,6 @@
 -- Set barbar's options
 vim.g.barbar_auto_setup = false -- disable auto-setup
-require('barbar').setup() -- default config
+require('barbar').setup({ auto_hide = 1 })
 
 vim.api.nvim_create_autocmd('FileType', {
   callback = function(tbl)
