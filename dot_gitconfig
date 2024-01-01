@@ -1,7 +1,7 @@
 [user]
 	name = Ahad Chowdhury
 	email = ahad@maacpiash.com
-	signingkey = A082C2909E5B401B
+	signingkey = 615380395B242163
 [commit]
 	gpgSign = true
 [pull]
