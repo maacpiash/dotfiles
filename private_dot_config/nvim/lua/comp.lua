@@ -1,6 +1,7 @@
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local lspkind = require('lspkind')
 cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
 cmp.setup({
   snippet = {
@@ -42,4 +43,12 @@ cmp.setup({
     { name = 'nvim_lsp_signature_help' },
     { name = 'luasnip' },
   },
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'symbol', -- show only symbol annotations
+      maxwidth = 32, -- prevent the popup from showing more than provided characters
+      ellipsis_char = '…', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char
+      show_labelDetails = true, -- show labelDetails in menu. Disabled by default
+    })
+  }
 })

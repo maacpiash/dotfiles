@@ -37,6 +37,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp-signature-help'          -- nvim-cmp source for displaying function signatures
   use 'hrsh7th/cmp-buffer'                           -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-path'                             -- nvim-cmp source for filesystem paths
+  use 'onsails/lspkind.nvim'                         -- vscode-like pictograms for neovim lsp completion items
   use 'simrat39/symbols-outline.nvim'                -- A tree like view for symbols, using LSP
   use {
     'nvim-treesitter/nvim-treesitter',               -- Parser generator
