@@ -56,9 +56,6 @@ return require('packer').startup(function(use)
   use 'martinsione/darkplus.nvim'                    -- dark VS theme
   use 'whatyouhide/vim-gotham'                       -- Gotham, a very dark theme
   use { "catppuccin/nvim", as = "catppuccin" }       -- Catpuccin theme
-  use 'OmniSharp/omnisharp-vim'                      -- OmniSharp
-  use 'OmniSharp/omnisharp-roslyn'                   -- Roslyn-based OmniSharp LSP
-  use 'Hoffs/omnisharp-extended-lsp.nvim'            -- Extended 'textDocument/definition' handler for OmniSharp LSP
   use 'fedepujol/move.nvim'                          -- move lines and blocks and auto-indent them
   use {                                              -- tabs
     'romgrk/barbar.nvim',
