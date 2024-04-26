@@ -34,6 +34,15 @@ local plugins = {
       "nvim-treesitter/nvim-treesitter",
       build = ":TSUpdate"
    },
+   {
+      "nvim-neo-tree/neo-tree.nvim",
+      branch = "v3.x",
+      dependencies = {
+         "nvim-lua/plenary.nvim",
+         "nvim-tree/nvim-web-devicons",
+         "MunifTanjim/nui.nvim",
+      }
+   },
 }
 local options = {}
 
@@ -67,3 +76,5 @@ ts_config.setup({
    highlight = { enabled = true },
    indent = { enabled = true },
 })
+
+vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle<CR>", {})
