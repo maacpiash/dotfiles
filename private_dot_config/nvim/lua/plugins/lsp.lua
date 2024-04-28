@@ -1,3 +1,20 @@
+local ensure_installed = {
+   "omnisharp",
+   "tsserver",
+   "pyright",
+   "gopls",
+   "gleam",
+   "html",
+   "astro",
+   "emmet_ls",
+   "cssls",
+   "eslint",
+   "clangd",
+   "lua_ls",
+   "rust_analyzer",
+   "svelte",
+}
+
 return {
    {
       "williamboman/mason.nvim",
@@ -9,22 +26,7 @@ return {
       "williamboman/mason-lspconfig.nvim",
       config = function()
          require("mason-lspconfig").setup({
-            ensure_installed = {
-               "omnisharp",
-               "tsserver",
-               "pyright",
-               "gopls",
-               "gleam",
-               "html",
-               "astro",
-               "emmet_ls",
-               "cssls",
-               "eslint",
-               "clangd",
-               "lua_ls",
-               "rust_analyzer",
-               "svelte",
-            },
+            ensure_installed = ensure_installed,
          })
       end
    },
@@ -32,7 +34,9 @@ return {
       "neovim/nvim-lspconfig",
       config = function()
          local lspconfig = require("lspconfig")
-         lspconfig.lua_ls.setup({})
+         for _, value in ipairs(ensure_installed) do
+            lspconfig[value].setup({})
+         end
          vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true, silent = true })
          vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { noremap = true, silent = true })
       end
