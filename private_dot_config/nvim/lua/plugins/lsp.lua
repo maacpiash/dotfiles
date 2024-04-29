@@ -13,6 +13,11 @@ local ensure_installed = {
    lua_ls = {},
    rust_analyzer = {},
    svelte = {},
+   -- linters and formatters
+   black = {},
+   eslint_d = {},
+   prettierd = {},
+   stylua = {},
 }
 
 return {
