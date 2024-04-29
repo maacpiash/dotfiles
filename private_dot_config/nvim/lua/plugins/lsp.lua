@@ -1,18 +1,18 @@
 local ensure_installed = {
-   "omnisharp",
-   "tsserver",
-   "pyright",
-   "gopls",
-   "gleam",
-   "html",
-   "astro",
-   "emmet_ls",
-   "cssls",
-   "eslint",
-   "clangd",
-   "lua_ls",
-   "rust_analyzer",
-   "svelte",
+   omnisharp = {},
+   tsserver = {},
+   pyright = {},
+   gopls = {},
+   gleam = {},
+   html = {},
+   astro = {},
+   emmet_ls = {},
+   cssls = {},
+   eslint = {},
+   clangd = {},
+   lua_ls = {},
+   rust_analyzer = {},
+   svelte = {},
 }
 
 return {
@@ -34,8 +34,8 @@ return {
       "neovim/nvim-lspconfig",
       config = function()
          local lspconfig = require("lspconfig")
-         for _, value in ipairs(ensure_installed) do
-            lspconfig[value].setup({})
+         for server, config in pairs(ensure_installed) do
+            lspconfig[server].setup(config)
          end
          vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true, silent = true })
          vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { noremap = true, silent = true })
