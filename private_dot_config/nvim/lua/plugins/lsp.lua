@@ -26,7 +26,22 @@ return {
       "williamboman/mason-lspconfig.nvim",
       config = function()
          require("mason-lspconfig").setup({
-            ensure_installed = ensure_installed,
+            ensure_installed = {
+               "omnisharp",
+               "tsserver",
+               "pyright",
+               "gopls",
+               "gleam",
+               "html",
+               "astro",
+               "emmet_ls",
+               "cssls",
+               "eslint",
+               "clangd",
+               "lua_ls",
+               "rust_analyzer",
+               "svelte",
+            },
          })
       end
    },
