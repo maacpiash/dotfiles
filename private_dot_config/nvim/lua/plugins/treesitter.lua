@@ -9,7 +9,6 @@ return {
                "c_sharp",
                "comment",
                "dockerfile",
-               "gleam",
                "go",
                "json",
                "lua",
