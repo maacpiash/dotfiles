@@ -1,6 +1,6 @@
 local ensure_installed = {
    omnisharp = {},
-   tsserver = {},
+   ts_ls = {},
    pyright = {},
    gopls = {},
    html = {},
@@ -27,7 +27,7 @@ return {
          require("mason-lspconfig").setup({
             ensure_installed = {
                "omnisharp",
-               "tsserver",
+               "ts_ls",
                "pyright",
                "gopls",
                "html",
