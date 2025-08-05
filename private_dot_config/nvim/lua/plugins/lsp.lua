@@ -50,7 +50,7 @@ return {
          for server, config in pairs(ensure_installed) do
             lspconfig[server].setup(config)
          end
-         vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true, silent = true })
+         vim.keymap.set("n", "K", function() vim.lsp.buf.hover({ border = 'single'}) end, { noremap = true, silent = true })
          vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { noremap = true, silent = true })
       end
    }
