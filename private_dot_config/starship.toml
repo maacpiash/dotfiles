@@ -1,3 +1,12 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[aws]
+symbol = "󰸏 "
+format = '$symbol($profile )($region )'
+
+[aws.region_aliases]
+ap-southeast-2 = 'syd'
+
 [c]
 symbol = ' '
 
@@ -20,7 +29,7 @@ read_only = ' '
 symbol = ' '
 
 [dotnet]
-symbol = ' '
+symbol = '󰪮 '
 
 [git_branch]
 symbol = ' '
